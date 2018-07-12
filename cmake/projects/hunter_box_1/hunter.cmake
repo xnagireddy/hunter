@@ -14,7 +14,7 @@ hunter_add_version(
     VERSION
     1.0.0
     URL
-    "https://github.com/hunter-packages/hunter_box_1/archive/v1.0.0.tar.gz"
+    "https://github.com/hunterbox/hunter_box_1/archive/v1.0.0.tar.gz"
     SHA1
     4fa7fe75629f148a61cedc6ba0bce74f177a6747
 )
