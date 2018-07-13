@@ -4,7 +4,6 @@
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
 
 include(hunter_add_version)
-include(hunter_cacheable)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -19,6 +18,5 @@ hunter_add_version(
     427bf3e14c8d6291a45baea581f16a39df7ba9ac
 )
 
-hunter_pick_scheme(DEFAULT url_sha1_cmake)
-hunter_cacheable(inotify-tools)
+hunter_pick_scheme(DEFAULT url_sha1_inotify-tools)
 hunter_download(PACKAGE_NAME inotify-tools)

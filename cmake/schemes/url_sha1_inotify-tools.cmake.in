@@ -1,0 +1,46 @@
+cmake_minimum_required(VERSION 3.0)
+
+project(Hunter LANGUAGES NONE)
+
+include(ExternalProject)
+
+list(APPEND CMAKE_MODULE_PATH "@HUNTER_SELF@/cmake/modules")
+
+include(hunter_status_debug)
+include(hunter_assert_not_empty_string)
+
+hunter_status_debug("Scheme: url_sha1_inotify-tools")
+
+hunter_assert_not_empty_string("@HUNTER_SELF@")
+hunter_assert_not_empty_string("@HUNTER_EP_NAME@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_URL@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_SHA1@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_DOWNLOAD_DIR@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_SOURCE_DIR@")
+hunter_assert_not_empty_string("@HUNTER_INSTALL_PREFIX@")
+
+ExternalProject_Add(
+    @HUNTER_EP_NAME@
+    URL
+    @HUNTER_PACKAGE_URL@
+    URL_HASH
+    SHA1=@HUNTER_PACKAGE_SHA1@
+    DOWNLOAD_DIR
+    "@HUNTER_PACKAGE_DOWNLOAD_DIR@"
+    SOURCE_DIR
+    "@HUNTER_PACKAGE_SOURCE_DIR@"
+    INSTALL_DIR
+    "@HUNTER_INSTALL_PREFIX@"
+    CONFIGURE_COMMAND
+    ./autogen.sh
+    COMMAND
+    ./configure --prefix=@HUNTER_INSTALL_PREFIX@
+    BUILD_COMMAND
+    make
+    BUILD_IN_SOURCE
+    1
+    INSTALL_COMMAND
+    make install
+)
+
+
