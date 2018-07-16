@@ -16,7 +16,7 @@ hunter_add_version(
     URL
     "https://github.com/xnagireddy/inotify-tools/archive/hunterized.tar.gz"
     SHA1
-    0c9e38576bf29d1a880fb048ba2842c3fd71bce9
+    c12ac5bfeed0ef403b7717ca42c26b9d20663469
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
