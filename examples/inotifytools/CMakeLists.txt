@@ -14,6 +14,5 @@ hunter_add_package(inotifytools)
 find_package(inotifytools CONFIG REQUIRED)
 
 add_executable(inotifytest inotifytest.cpp)
-# target_link_libraries(inotify-test PUBLIC inotify-tools::inotify-tools)
 target_link_libraries(inotifytest PUBLIC inotifytools::inotifytools)
 # DOCUMENTATION_END }
