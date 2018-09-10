@@ -56,7 +56,7 @@ hunter_add_version(
     URL
     "https://github.com/xnagireddy/poco/archive/hunter.zip"
     SHA1
-    22dcb34d85d2cbf2ce71fd84b28489c99ed112d0
+    1e8e8ebdc55cde2a8f17edfee3cc7e9b6b5fdf5b
 )
 
 hunter_add_version(
