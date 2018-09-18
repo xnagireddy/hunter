@@ -11,8 +11,8 @@ hunter_add_version(
     1.9.0
     URL
     "https://pocoproject.org/releases/poco-1.9.0/poco-1.9.0-all.zip"
-    SHA256
-    748381a2b6f2a8b585331608db74100a15b12a00a0f4cb663896ab0380b34b14
+    SHA1
+    74ec1d97b937122283557c3112414fef59f0f66c
 )
 
 hunter_add_version(
