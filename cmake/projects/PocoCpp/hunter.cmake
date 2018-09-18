@@ -8,11 +8,22 @@ hunter_add_version(
     PACKAGE_NAME
     PocoCpp
     VERSION
+    1.9.0
+    URL
+    "https://pocoproject.org/releases/poco-1.9.0/poco-1.9.0-all.zip"
+    SHA256
+    748381a2b6f2a8b585331608db74100a15b12a00a0f4cb663896ab0380b34b14
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    PocoCpp
+    VERSION
     1.7.9-p1
     URL
-    "https://github.com/xnagireddy/poco/archive/hunter.zip"
+    "https://github.com/hunter-packages/poco/archive/v1.7.9-p1.zip"
     SHA1
-    1e8e8ebdc55cde2a8f17edfee3cc7e9b6b5fdf5b
+    28adb9a84af3000dde5525c14e906f5f5ea095f3
 )
 
 hunter_add_version(
