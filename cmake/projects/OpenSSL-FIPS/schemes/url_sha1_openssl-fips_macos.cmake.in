@@ -40,16 +40,6 @@ if(NOT configure_architectures)
   set(configure_architectures "x86_64")
 endif()
 
-# OpenSSL appends the version number differently by version
-if("@HUNTER_OpenSSL_VERSION@" VERSION_LESS "1.0")
-  string(REGEX MATCH "^[0-9\\.]+" shared_library_version_extension "@HUNTER_OpenSSL_VERSION@")
-else()
-  string(REGEX MATCH "^[0-9]\\.[0-9]" shared_library_version_extension "@HUNTER_OpenSSL_VERSION@")
-  if("@HUNTER_OpenSSL_VERSION@" VERSION_LESS "1.1")
-    set(shared_library_version_extension "${shared_library_version_extension}.0")
-  endif()
-endif()
-
 if(BUILD_SHARED_LIBS)
   set(libsuffix ".${shared_library_version_extension}.dylib")
   set(shared_flag shared)

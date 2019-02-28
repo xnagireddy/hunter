@@ -13,4 +13,4 @@ hunter_add_package(OpenSSL-FIPS)
 find_package(OpenSSL-FIPS REQUIRED)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC OpenSSL-FIPS::SSL OpenSSL-FIPS::Crypto)
+# target_link_libraries(foo PUBLIC OpenSSL-FIPS::SSL OpenSSL-FIPS::Crypto)
